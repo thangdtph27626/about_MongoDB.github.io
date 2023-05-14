@@ -68,13 +68,13 @@ Một tổ chức có thể muốn sử dụng MongoDB cho những việc sau:
 - Code: Kiểu dữ liệu này được sử dụng để lưu giữ JavaScrip code vào trong Document.
 - Regular expression: Kiểu dữ liệu này được sử dụng để lưu giữ Regular Expresion.
 
-# Khi nào NÊN sử dụng MongoDB ?
+# Khi nào nên sử dụng MongoDB ?
 - Sử dụng document để lưu trữ dữ liệu, dễ dàng thêm bớt, mở rộng dữ liệu tùy ý.
 - Ứng dụng có tính chất Insert nhiều (write-intensive).
 - Cần cơ chế Replication và High Availabity.
 - Cần cơ chế Sharding
 
-# Khi nào KHÔNG NÊN sử dụng MongoDB ?
+# Khi nào không nên sử dụng MongoDB ?
 - Các ứng dụng cần sử dụng nhiều transaction (như ngân hàng) do Mongodb không có cơ chế transaction (giao dịch) để phục vụ cho các ứng dụng ngân hàng
 - Các ứng dụng cần SQL (sử dụng joins).
 
