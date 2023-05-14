@@ -77,3 +77,6 @@ Một tổ chức có thể muốn sử dụng MongoDB cho những việc sau:
 # Khi nào KHÔNG NÊN sử dụng MongoDB ?
 - Các ứng dụng cần sử dụng nhiều transaction (như ngân hàng) do Mongodb không có cơ chế transaction (giao dịch) để phục vụ cho các ứng dụng ngân hàng
 - Các ứng dụng cần SQL (sử dụng joins).
+
+# Kết thúc
+- bạn có thể tìm hiểu các câu lệnh truy vấn [tại đây](https://www.mongodb.com/docs/manual/tutorial/query-embedded-documents/)
