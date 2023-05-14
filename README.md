@@ -40,6 +40,16 @@ Một tổ chức có thể muốn sử dụng MongoDB cho những việc sau:
 -  Mọi thay đổi về dữ liệu mặc định đều chưa được ghi xuống ổ cứng ngay lập tức vì vậy khả năng bị mất dữ liệu từ nguyên nhân mất điện đột xuất là rất cao.
 - Không có cơ chế transaction (giao dịch) để phục vụ các ứng dụng ngân hàng.
 
+# Các thành phần chính MongoDB là gì?
+
+- _id: Đây là trường bắt buộc trong mọi document MongoDB. Trường _id đại diện cho một unique value trong document MongoDB. Trường _id giống như primary key của document. Nếu bạn tạo một document mới mà không có trường _id, MongoDB sẽ tự động tạo trường. Vì vậy, ví dụ: nếu chúng ta thấy ví dụ về bảng customer ở trên, Mongo DB sẽ thêm 24 chữ số unique vào mỗi document trong collection.
+- Collection: Đây là một nhóm các document MongoDB. Collection tương đương với một table được tạo trong bất kỳ RDMS nào khác như Oracle hoặc MSSQL. Một collection tồn tại trong một cơ sở dữ liệu duy nhất.
+- Cursor: Đây là một con trỏ đến tập kết quả của một query. Client có thể lặp lại qua cursor để truy xuất kết quả.
+- Database: Đây là vùng chứa cho các collection như trong RDMS, trong đó nó là vùng chứa cho các tables. Mỗi cơ sở dữ liệu có một bộ tệp riêng trên hệ thống tệp. Một máy chủ MongoDB có thể lưu trữ nhiều cơ sở dữ liệu.
+- Document: Bản ghi trong collection MongoDB về cơ bản được gọi là document. Document sẽ bao gồm tên trường (name) và value.
+- Field: Một cặp name-value trong document. Một document có thể không hoặc có nhiều filed. Các filed tương tự như các columns trong cơ sở dữ liệu quan hệ.
+- JSON: Đây được gọi là JavaScript Object Notation. Đây là định dạng văn bản thuần túy, có thể đọc được bởi con người để thể hiện dữ liệu có cấu trúc. JSON hiện được hỗ trợ trong nhiều ngôn ngữ lập trình.
+
 # Các kiểu dữ liệu trong MongoDB
 
 - String: Đây là kiểu dữ liệu được sử dụng phổ biến nhất để lưu giữ dữ liệu. Chuỗi trong MongoDB phải là UTF-8 hợp lệ.
@@ -57,3 +67,13 @@ Một tổ chức có thể muốn sử dụng MongoDB cho những việc sau:
 - Binary data: Kiểu dữ liệu này được sử dụng để lưu giữ dữ liệu nhị phân.
 - Code: Kiểu dữ liệu này được sử dụng để lưu giữ JavaScrip code vào trong Document.
 - Regular expression: Kiểu dữ liệu này được sử dụng để lưu giữ Regular Expresion.
+
+# Khi nào NÊN sử dụng MongoDB ?
+- Sử dụng document để lưu trữ dữ liệu, dễ dàng thêm bớt, mở rộng dữ liệu tùy ý.
+- Ứng dụng có tính chất Insert nhiều (write-intensive).
+- Cần cơ chế Replication và High Availabity.
+- Cần cơ chế Sharding
+
+# Khi nào KHÔNG NÊN sử dụng MongoDB ?
+- Các ứng dụng cần sử dụng nhiều transaction (như ngân hàng) do Mongodb không có cơ chế transaction (giao dịch) để phục vụ cho các ứng dụng ngân hàng
+- Các ứng dụng cần SQL (sử dụng joins).
